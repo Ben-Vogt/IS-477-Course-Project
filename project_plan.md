@@ -33,9 +33,6 @@ the final and intermediate reports.
 
 ## **Datasets**
 
-Identify and describe the datasets you will use. You must include at
-least two different datasets that will be integrated later. For each
-dataset, note:
 
 - **Name of dataset (1):** EPA AQS (Air Quality System) Dataset**\**
 
@@ -165,7 +162,7 @@ leaves 9 weeks in total before the final deadline on 12/10).
   computational resources to handle this, but it should be noted that
   the scale of the data could be tricky.
 
-- Census data is famously exclusionary, and in using it I am limited by
+- Census data is infamously exclusionary, and in using it I am limited by
   the Census Bureau's choices on what categories to put people in.
 
 ## **Gaps**
