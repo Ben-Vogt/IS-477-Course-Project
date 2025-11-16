@@ -134,6 +134,7 @@ records, etc.
 Week 6: Begin Data Analysis. Explore various relationships and see what
 patterns can be gleaned from the synthesis of the datasets.\
 \
+
 Week 7: Decide on and generate important visuals from the analysis
 steps.\
 \
