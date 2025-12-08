@@ -82,6 +82,7 @@ rule analyze_data:
         script="scripts/analysis.py"
     output:
         directory(f"maps/{YEAR}/"),
-        f"artifacts/results_{YEAR}.md"
+        f"artifacts/results_{YEAR}.md",
+        directory(f"models/{YEAR}/")
     script:
         "scripts/analysis.py"
