@@ -1,7 +1,7 @@
 import pandas as pd
 import json
 import os
-import util
+from scripts import util
 
 def clean_census_data(year):
     # Load data
@@ -31,8 +31,6 @@ def clean_census_data(year):
     }
     sentinel_list = list(census_sentinel_values.keys())
     df.replace(sentinel_list, pd.NA, inplace=True)
-
-
 
 
     # Write cleaned data at the end

@@ -4,7 +4,20 @@ import requests
 import json
 import time
 import pandas as pd
-import util
+from scripts import util
+from scripts.compute_checksums import compute_file_checksum, load_checksums
+
+def verify_file_checksum(filepath, year, data_type="acs_data"):
+    """Verify a file's checksum matches the stored value. Returns True if valid, False if invalid, None if no checksum exists."""
+    checksums = load_checksums(year)
+    filename = os.path.basename(filepath)
+    
+    if filename not in checksums[data_type]:
+        return None  # No checksum recorded yet
+    
+    expected_checksum = checksums[data_type][filename]
+    actual_checksum = compute_file_checksum(filepath)
+    return actual_checksum == expected_checksum
 
 def retrieve_acs_data(year, states="all"):
     """
@@ -68,8 +81,8 @@ def retrieve_acs_data(year, states="all"):
     print("Fetching metadata for table groups:")
     relevant_variables = util.get_relevant_variables()
     
-    # Write Census variable metadata to a markdown file
-    with open("census_metadata.md", "w", encoding="utf-8") as f:
+    # Write Census variable metadata to census_metadata.md
+    with open("artifacts/census_metadata.md", "w", encoding="utf-8") as f:
         f.write("# Census ACS 5-Year (2020) Variable Metadata\n\n")
         f.write(f"**Total Variables:** {len(relevant_variables)}\n\n")
         f.write("**Table Groups:**\n")
@@ -116,15 +129,25 @@ def retrieve_acs_data(year, states="all"):
                 
                 f.write("---\n\n")
     
-    print(f"Wrote metadata for {len(relevant_variables)} variables to census_metadata.md")
+    print(f"Wrote metadata for {len(relevant_variables)} variables to artifacts/census_metadata.md")
     
     for i, state_code in enumerate(state_code_list, 1):
         state_name = state_code_to_name.get(state_code, "Unknown")
         print(f"Preparing to fetch data for state {i} / {len(state_code_list)}: {state_name} (code: {state_code})")
 
-        if os.path.exists(f"data/5_year_data/{year}/census_state_data_{state_code}.json"):
-            print(f" data for state code {state_code} already exists. Skipping download.")
-            continue
+        filepath = f"data/5_year_data/{year}/census_state_data_{state_code}.json"
+        if os.path.exists(filepath):
+            # Verify checksum of existing file
+            checksum_result = verify_file_checksum(filepath, year, "acs_data")
+            if checksum_result is True:
+                print(f"Census data for state code {state_code} already exists and checksum is valid. Skipping download.")
+                continue
+            elif checksum_result is False:
+                print(f"Census data for state code {state_code} exists but checksum is INVALID. Re-downloading...")
+                os.remove(filepath)
+            else:
+                print(f"Census data for state code {state_code} already exists but no checksum on record. Verifying by re-download.")
+                os.remove(filepath)
 
         # Fetch each table group separately (Census API only allows one group per request)
         all_tables_data = {}
@@ -152,9 +175,10 @@ def retrieve_acs_data(year, states="all"):
             else:
                 all_tables_data[table_code] = table.json()
             
-            time.sleep(2)  # Brief delay between table requests
+            time.sleep(2)  # be nice
 
-        with open(f"data/5_year_data/{year}/census_state_data_{state_code}.json", "w") as f:
+        filepath = f"data/5_year_data/{year}/census_state_data_{state_code}.json"
+        with open(filepath, "w") as f:
             json.dump(all_tables_data, f)
         print(f"Saved census data for state code {state_code}")
         time.sleep(5) # be nice
