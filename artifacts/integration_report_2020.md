@@ -24,56 +24,56 @@ These counties have census data but no air quality monitoring stations:
 
 | State Code | County Code | County Name |
 |------------|-------------|-------------|
-| 1.0 | 1.0 | Autauga County, Alabama |
-| 1.0 | 5.0 | Barbour County, Alabama |
-| 1.0 | 7.0 | Bibb County, Alabama |
-| 1.0 | 9.0 | Blount County, Alabama |
-| 1.0 | 11.0 | Bullock County, Alabama |
-| 1.0 | 13.0 | Butler County, Alabama |
-| 1.0 | 15.0 | Calhoun County, Alabama |
-| 1.0 | 17.0 | Chambers County, Alabama |
-| 1.0 | 19.0 | Cherokee County, Alabama |
-| 1.0 | 21.0 | Chilton County, Alabama |
-| 1.0 | 23.0 | Choctaw County, Alabama |
-| 1.0 | 25.0 | Clarke County, Alabama |
-| 1.0 | 29.0 | Cleburne County, Alabama |
-| 1.0 | 31.0 | Coffee County, Alabama |
-| 1.0 | 33.0 | Colbert County, Alabama |
-| 1.0 | 35.0 | Conecuh County, Alabama |
-| 1.0 | 37.0 | Coosa County, Alabama |
-| 1.0 | 39.0 | Covington County, Alabama |
-| 1.0 | 41.0 | Crenshaw County, Alabama |
-| 1.0 | 43.0 | Cullman County, Alabama |
-| 1.0 | 45.0 | Dale County, Alabama |
-| 1.0 | 47.0 | Dallas County, Alabama |
-| 1.0 | 53.0 | Escambia County, Alabama |
-| 1.0 | 57.0 | Fayette County, Alabama |
-| 1.0 | 59.0 | Franklin County, Alabama |
-| 1.0 | 61.0 | Geneva County, Alabama |
-| 1.0 | 63.0 | Greene County, Alabama |
-| 1.0 | 65.0 | Hale County, Alabama |
-| 1.0 | 67.0 | Henry County, Alabama |
-| 1.0 | 69.0 | Houston County, Alabama |
-| 1.0 | 71.0 | Jackson County, Alabama |
-| 1.0 | 75.0 | Lamar County, Alabama |
-| 1.0 | 77.0 | Lauderdale County, Alabama |
-| 1.0 | 79.0 | Lawrence County, Alabama |
-| 1.0 | 81.0 | Lee County, Alabama |
-| 1.0 | 83.0 | Limestone County, Alabama |
-| 1.0 | 85.0 | Lowndes County, Alabama |
-| 1.0 | 87.0 | Macon County, Alabama |
-| 1.0 | 91.0 | Marengo County, Alabama |
-| 1.0 | 93.0 | Marion County, Alabama |
-| 1.0 | 95.0 | Marshall County, Alabama |
-| 1.0 | 99.0 | Monroe County, Alabama |
-| 1.0 | 105.0 | Perry County, Alabama |
-| 1.0 | 107.0 | Pickens County, Alabama |
-| 1.0 | 109.0 | Pike County, Alabama |
-| 1.0 | 111.0 | Randolph County, Alabama |
-| 1.0 | 115.0 | St. Clair County, Alabama |
-| 1.0 | 121.0 | Talladega County, Alabama |
-| 1.0 | 123.0 | Tallapoosa County, Alabama |
-| 1.0 | 127.0 | Walker County, Alabama |
+| 1 | 1 | Autauga County, Alabama |
+| 1 | 5 | Barbour County, Alabama |
+| 1 | 7 | Bibb County, Alabama |
+| 1 | 9 | Blount County, Alabama |
+| 1 | 11 | Bullock County, Alabama |
+| 1 | 13 | Butler County, Alabama |
+| 1 | 15 | Calhoun County, Alabama |
+| 1 | 17 | Chambers County, Alabama |
+| 1 | 19 | Cherokee County, Alabama |
+| 1 | 21 | Chilton County, Alabama |
+| 1 | 23 | Choctaw County, Alabama |
+| 1 | 25 | Clarke County, Alabama |
+| 1 | 29 | Cleburne County, Alabama |
+| 1 | 31 | Coffee County, Alabama |
+| 1 | 33 | Colbert County, Alabama |
+| 1 | 35 | Conecuh County, Alabama |
+| 1 | 37 | Coosa County, Alabama |
+| 1 | 39 | Covington County, Alabama |
+| 1 | 41 | Crenshaw County, Alabama |
+| 1 | 43 | Cullman County, Alabama |
+| 1 | 45 | Dale County, Alabama |
+| 1 | 47 | Dallas County, Alabama |
+| 1 | 53 | Escambia County, Alabama |
+| 1 | 57 | Fayette County, Alabama |
+| 1 | 59 | Franklin County, Alabama |
+| 1 | 61 | Geneva County, Alabama |
+| 1 | 63 | Greene County, Alabama |
+| 1 | 65 | Hale County, Alabama |
+| 1 | 67 | Henry County, Alabama |
+| 1 | 69 | Houston County, Alabama |
+| 1 | 71 | Jackson County, Alabama |
+| 1 | 75 | Lamar County, Alabama |
+| 1 | 77 | Lauderdale County, Alabama |
+| 1 | 79 | Lawrence County, Alabama |
+| 1 | 81 | Lee County, Alabama |
+| 1 | 83 | Limestone County, Alabama |
+| 1 | 85 | Lowndes County, Alabama |
+| 1 | 87 | Macon County, Alabama |
+| 1 | 91 | Marengo County, Alabama |
+| 1 | 93 | Marion County, Alabama |
+| 1 | 95 | Marshall County, Alabama |
+| 1 | 99 | Monroe County, Alabama |
+| 1 | 105 | Perry County, Alabama |
+| 1 | 107 | Pickens County, Alabama |
+| 1 | 109 | Pike County, Alabama |
+| 1 | 111 | Randolph County, Alabama |
+| 1 | 115 | St. Clair County, Alabama |
+| 1 | 121 | Talladega County, Alabama |
+| 1 | 123 | Tallapoosa County, Alabama |
+| 1 | 127 | Walker County, Alabama |
 
 *... and 2271 more counties*
 
@@ -83,8 +83,8 @@ These monitoring locations exist but do not match census county data:
 
 | State Code | County Code |
 |------------|-------------|
-| 78.0 | 10.0 |
-| 78.0 | 30.0 |
-| 80.0 | 2.0 |
-| 80.0 | 26.0 |
+| 78 | 10 |
+| 78 | 30 |
+| 80 | 2 |
+| 80 | 26 |
 

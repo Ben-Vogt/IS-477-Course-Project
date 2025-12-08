@@ -81,7 +81,7 @@ def integrate_data(year):
             f.write("| State Code | County Code | County Name |\n")
             f.write("|------------|-------------|-------------|\n")
             for _, row in acs_unmatched.head(50).iterrows():
-                f.write(f"| {row['state']} | {row['county']} | {row['NAME']} |\n")
+                f.write(f"| {int(row['state'])} | {int(row['county'])} | {row['NAME']} |\n")
             if len(acs_unmatched) > 50:
                 f.write(f"\n*... and {len(acs_unmatched) - 50} more counties*\n")
             f.write("\n")
@@ -92,7 +92,7 @@ def integrate_data(year):
             f.write("| State Code | County Code |\n")
             f.write("|------------|-------------|\n")
             for _, row in aqs_unmatched.head(50).iterrows():
-                f.write(f"| {row['state_code']} | {row['county_code']} |\n")
+                f.write(f"| {int(row['state_code'])} | {int(row['county_code'])} |\n")
             if len(aqs_unmatched) > 50:
                 f.write(f"\n*... and {len(aqs_unmatched) - 50} more locations*\n")
             f.write("\n")
